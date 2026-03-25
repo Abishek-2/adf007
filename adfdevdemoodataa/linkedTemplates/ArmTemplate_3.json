@@ -7,10 +7,6 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "adfdevdemoodataa"
 		},
-		"LS_SQL_ADLS_password": {
-			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'LS_SQL_ADLS'"
-		},
 		"SqlServer1_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'SqlServer1'"
@@ -26,18 +22,6 @@
 		"SqlServer4_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'SqlServer4'"
-		},
-		"LS_SQL_ADLS_properties_typeProperties_server": {
-			"type": "string",
-			"defaultValue": "localhost"
-		},
-		"LS_SQL_ADLS_properties_typeProperties_database": {
-			"type": "string",
-			"defaultValue": "AdventureWorks2019"
-		},
-		"LS_SQL_ADLS_properties_typeProperties_userName": {
-			"type": "string",
-			"defaultValue": "sa"
 		},
 		"SqlServer1_properties_typeProperties_server": {
 			"type": "string",
@@ -92,32 +76,6 @@
 		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
 	},
 	"resources": [
-		{
-			"name": "[concat(parameters('factoryName'), '/LS_SQL_ADLS')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "SqlServer",
-				"typeProperties": {
-					"server": "[parameters('LS_SQL_ADLS_properties_typeProperties_server')]",
-					"database": "[parameters('LS_SQL_ADLS_properties_typeProperties_database')]",
-					"encrypt": "optional",
-					"trustServerCertificate": false,
-					"authenticationType": "SQL",
-					"userName": "[parameters('LS_SQL_ADLS_properties_typeProperties_userName')]",
-					"password": {
-						"type": "SecureString",
-						"value": "[parameters('LS_SQL_ADLS_password')]"
-					}
-				},
-				"connectVia": {
-					"referenceName": "selfhostedintegrationRuntime1",
-					"type": "IntegrationRuntimeReference"
-				}
-			},
-			"dependsOn": []
-		},
 		{
 			"name": "[concat(parameters('factoryName'), '/SqlServer1')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
@@ -1169,9 +1127,7 @@
 					"table": "Person"
 				}
 			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/LS_SQL_ADLS')]"
-			]
+			"dependsOn": []
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/DelimitedText1')]",
