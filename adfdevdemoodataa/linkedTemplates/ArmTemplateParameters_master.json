@@ -14,6 +14,9 @@
 		"AzureBlobStorage3_connectionString": {
 			"value": ""
 		},
+		"AzureBlobStorage4_connectionString": {
+			"value": ""
+		},
 		"AzureDataLakeStorage1_accountKey": {
 			"value": ""
 		},
@@ -33,6 +36,18 @@
 			"value": ""
 		},
 		"AzureDataLakeStorage15_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage16_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage17_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage18_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage19_accountKey": {
 			"value": ""
 		},
 		"AzureDataLakeStorage2_accountKey": {
@@ -57,6 +72,9 @@
 			"value": ""
 		},
 		"AzureDataLakeStorage9_accountKey": {
+			"value": ""
+		},
+		"LS_ADLS_CSVFILES_accountKey": {
 			"value": ""
 		},
 		"LS_SQL_ADLS_password": {
@@ -107,6 +125,18 @@
 		"AzureDataLakeStorage15_properties_typeProperties_url": {
 			"value": "https://adlsdevbulkload0.dfs.core.windows.net/"
 		},
+		"AzureDataLakeStorage16_properties_typeProperties_url": {
+			"value": "https://adlsdevbulkload0.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage17_properties_typeProperties_url": {
+			"value": "https://adlsdevbulkload0.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage18_properties_typeProperties_url": {
+			"value": "https://adlsdevbulkload0.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage19_properties_typeProperties_url": {
+			"value": "https://adlsdevbank0.dfs.core.windows.net/"
+		},
 		"AzureDataLakeStorage2_properties_typeProperties_url": {
 			"value": "https://adlsdevbank0.dfs.core.windows.net/"
 		},
@@ -133,6 +163,9 @@
 		},
 		"AzureKeyVault1_properties_typeProperties_baseUrl": {
 			"value": "https://keyvaultdemodata.vault.azure.net/"
+		},
+		"LS_ADLS_CSVFILES_properties_typeProperties_url": {
+			"value": "https://adlsdevbulkload0.dfs.core.windows.net/"
 		},
 		"LS_SQL_ADLS_properties_typeProperties_server": {
 			"value": "localhost"
